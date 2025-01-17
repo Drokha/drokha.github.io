@@ -1,8 +1,32 @@
 import { StatsCard } from "@/components/StatsCard";
 import { ProjectCard } from "@/components/ProjectCard";
-import { Dumbbell, Trophy, History } from "lucide-react";
+import { SkillProgress } from "@/components/SkillProgress";
+import { Dumbbell, Trophy, History, Code } from "lucide-react";
 
 const Index = () => {
+  const skills = [
+    {
+      name: "React & React Native",
+      level: 90,
+      description: "Advanced state management, custom hooks, and performance optimization",
+    },
+    {
+      name: "TypeScript",
+      level: 85,
+      description: "Type systems, generics, and advanced patterns",
+    },
+    {
+      name: "Node.js",
+      level: 80,
+      description: "REST APIs, authentication, and database integration",
+    },
+    {
+      name: "GraphQL",
+      level: 75,
+      description: "Schema design, resolvers, and Apollo implementation",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-background p-6 space-y-12">
       {/* Header */}
@@ -38,6 +62,17 @@ const Index = () => {
             value="10+"
             description="Technologies mastered"
           />
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2">
+          <Code className="w-6 h-6 text-workout-blue" />
+          <h2 className="text-2xl font-bold">Technical Skills</h2>
+        </div>
+        <div className="gradient-border p-6">
+          <SkillProgress skills={skills} />
         </div>
       </section>
 
