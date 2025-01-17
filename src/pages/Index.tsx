@@ -1,7 +1,8 @@
 import { StatsCard } from "@/components/StatsCard";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SkillProgress } from "@/components/SkillProgress";
-import { Dumbbell, Trophy, History, Code } from "lucide-react";
+import { AchievementBadge } from "@/components/AchievementBadge";
+import { Dumbbell, Trophy, History, Code, Award } from "lucide-react";
 
 const Index = () => {
   const skills = [
@@ -24,6 +25,29 @@ const Index = () => {
       name: "GraphQL",
       level: 75,
       description: "Schema design, resolvers, and Apollo implementation",
+    },
+  ];
+
+  const achievements = [
+    {
+      type: "trophy" as const,
+      title: "Best Code Architecture",
+      description: "Recognized for exceptional system design patterns",
+    },
+    {
+      type: "award" as const,
+      title: "Innovation Award",
+      description: "Created groundbreaking solutions for client challenges",
+    },
+    {
+      type: "medal" as const,
+      title: "Top Performer",
+      description: "Consistently exceeded project expectations",
+    },
+    {
+      type: "certification" as const,
+      title: "AWS Certified",
+      description: "Professional cloud architecture certification",
     },
   ];
 
@@ -73,6 +97,24 @@ const Index = () => {
         </div>
         <div className="gradient-border p-6">
           <SkillProgress skills={skills} />
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      <section className="space-y-4">
+        <div className="flex items-center gap-2">
+          <Award className="w-6 h-6 text-workout-purple" />
+          <h2 className="text-2xl font-bold">Achievements</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {achievements.map((achievement, index) => (
+            <AchievementBadge
+              key={index}
+              type={achievement.type}
+              title={achievement.title}
+              description={achievement.description}
+            />
+          ))}
         </div>
       </section>
 
