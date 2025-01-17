@@ -21,8 +21,7 @@ export const SkillProgress = ({ skills }: SkillProgressProps) => {
           </div>
           <Progress
             value={skill.level}
-            className="h-2 bg-secondary"
-            indicatorClassName="bg-gradient-to-r from-workout-blue to-workout-purple transition-all duration-500"
+            className="h-2 [&>div]:bg-gradient-to-r [&>div]:from-workout-blue [&>div]:to-workout-purple [&>div]:transition-all [&>div]:duration-500"
           />
           <p className="text-xs text-muted-foreground">{skill.description}</p>
         </div>
