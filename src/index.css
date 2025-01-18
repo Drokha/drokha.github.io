@@ -27,11 +27,11 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 240 10% 10%;
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 240 10% 12%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 240 10% 12%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
@@ -62,7 +62,7 @@
 
   .dark .gradient-border {
     background-image: linear-gradient(var(--background), var(--background)), 
-                      linear-gradient(to right, rgba(0, 230, 253, 0.8), rgba(189, 0, 255, 0.8));
+                      linear-gradient(to right, rgba(0, 230, 253, 1), rgba(189, 0, 255, 1));
   }
 }
 
