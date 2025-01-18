@@ -55,9 +55,14 @@
     border: double 1px transparent;
     border-radius: 12px;
     background-image: linear-gradient(var(--background), var(--background)), 
-                      linear-gradient(to right, #00E6FD, #BD00FF);
+                      linear-gradient(to right, rgba(0, 230, 253, 0.5), rgba(189, 0, 255, 0.5));
     background-origin: border-box;
     background-clip: padding-box, border-box;
+  }
+
+  .dark .gradient-border {
+    background-image: linear-gradient(var(--background), var(--background)), 
+                      linear-gradient(to right, rgba(0, 230, 253, 0.8), rgba(189, 0, 255, 0.8));
   }
 }
 
